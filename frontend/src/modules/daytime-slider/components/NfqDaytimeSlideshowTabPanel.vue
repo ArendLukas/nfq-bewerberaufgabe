@@ -59,7 +59,7 @@ watch(selectedTab, (newSelectedTab) => {
       <NfqArrowBackIcon />
     </button>
     <div class="daytime-slideshow-tab-panel__list-wrapper">
-      <ul role="tabpanel" :aria-labelledby="labelId" class="daytime-slideshow-tab-panel">
+      <ul role="tablist" :aria-labelledby="labelId" class="daytime-slideshow-tab-panel">
         <li v-for="tab in tabs" :key="tab.id" role="presentation">
           <button
             class="daytime-slideshow-tab-panel__button"
@@ -99,6 +99,7 @@ watch(selectedTab, (newSelectedTab) => {
       step="1"
       tabindex="-1"
       v-model="rangeInputValue"
+      aria-hidden="true"
     />
     <div class="daytime-slideshow-tab-panel__range-input-side"></div>
   </div>
