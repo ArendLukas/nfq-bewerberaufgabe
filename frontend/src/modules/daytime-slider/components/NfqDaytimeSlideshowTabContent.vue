@@ -16,7 +16,7 @@ defineProps({
 
 <template>
   <div class="daytime-slideshow-tab-content">
-    <img :src="tabData.imageUrl" class="daytime-slideshow-tab-content__image" alt="" />
+    <img :src="tabData.imageUrl" class="daytime-slideshow-tab-content__image" alt="" loading="lazy" />
     <div
       class="daytime-slideshow-tab-content__text-container"
       :class="'daytime-slideshow-tab-content__text-container--' + tabData.id"
