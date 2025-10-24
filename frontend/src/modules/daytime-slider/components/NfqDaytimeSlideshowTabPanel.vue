@@ -214,7 +214,7 @@ $mobileBreakpoint: 40rem;
 
   &__mobile-navigation-button {
     fill: var(--color-text-primary);
-    width: 2rem;
+    width: 4rem;
     height: 100px;
     background: none;
     border: none;
