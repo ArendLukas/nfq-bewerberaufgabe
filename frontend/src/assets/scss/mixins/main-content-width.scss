@@ -1,0 +1,8 @@
+@mixin main-content-width {
+  width: 70vw;
+  margin: auto;
+
+  @media only screen and (max-width: 40rem) {
+    width: 95vw;
+  }   
+}
