@@ -27,6 +27,14 @@ function getTabIndexForTab(tabToCheck: DaytimeSlideshowTabData) {
   return props.tabs.findIndex((tab) => tab.id === tabToCheck.id)
 }
 
+function handleHomeKeyPressed() {
+  selectedTab.value = props.tabs[0] as DaytimeSlideshowTabData;
+}
+
+function handleEndKeyPressed() {
+  selectedTab.value = props.tabs[props.tabs.length - 1] as DaytimeSlideshowTabData;
+}
+
 function selectNext() {
   selectedTab.value =
     props.tabs[getTabIndexForTab(selectedTab.value) + 1] ??
@@ -72,6 +80,8 @@ watch(selectedTab, (newSelectedTab) => {
             @click="handleTabButtonClicked(tab)"
             @keyup.right="selectNext"
             @keyup.left="selectPrevious"
+            @keyup.home="handleHomeKeyPressed"
+            @keyup.end="handleEndKeyPressed"
           >
             <component
               :is="tab.iconComponent"

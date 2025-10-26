@@ -15,7 +15,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="daytime-slideshow-tab-content">
+  <article class="daytime-slideshow-tab-content">
     <img :src="tabData.imageUrl" class="daytime-slideshow-tab-content__image" alt="" loading="lazy" />
     <div
       class="daytime-slideshow-tab-content__text-container"
@@ -28,7 +28,7 @@ defineProps({
       <p class="daytime-slideshow-tab-content__savings-line">{{ tabData.energySavings }} kW</p>
       <p class="daytime-slideshow-tab-content__savings-line">{{ tabData.moneySavings }} €</p>
     </div>
-  </div>
+  </article>
 </template>
 
 <style scoped lang="scss">
